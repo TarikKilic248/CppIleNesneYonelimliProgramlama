@@ -10,23 +10,24 @@ public:
     this->y = y;
   }
   void ekranaYaz() { cout << x << ", " << y << endl; }
-  bool baslangictaMi() {
-    if (x == 0 && y == 0) {
-      return true;
-    } else {
-      return false;
-    }
-  }
+  bool baslangictaMi() { return x == 0 && y == 0; }
 };
 
 int main() {
   nokta n;
+  nokta n2;
+  nokta *n3;
+  n3 = &n2;
   n.degerAta(2, 7);
   n.ekranaYaz();
 
-  nokta n2;
   n2.degerAta(0, 0);
   if (n2.baslangictaMi()) {
-    cout << "n2 baslangic noktasında";
+    cout << "n2 baslangic noktasında" << endl;
   }
+
+  n2.degerAta(1, 0);
+
+  cout << "n3 pointer ile yazılan değerler" << endl;
+  n3->ekranaYaz();
 }
