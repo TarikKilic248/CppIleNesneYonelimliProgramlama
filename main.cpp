@@ -3,10 +3,14 @@
 using namespace std;
 
 class nokta {
+private:
+  int x;
+
 public:
-  int x, y;
+  int y;
   void degerAta(int, int);
-  void ekranaYaz() { cout << x << ", " << y << endl; }
+  void ekranaYaz();
+  bool baslangicdaMi();
 };
 
 void nokta::degerAta(int x, int y) {
@@ -14,8 +18,13 @@ void nokta::degerAta(int x, int y) {
   this->y = y;
 }
 
+void nokta::ekranaYaz() { cout << x << ", " << y << endl; }
+
+bool nokta::baslangicdaMi() { return x == 0 && y == 0; }
+
 int main() {
   nokta n1;
+  n1.y = 10;
   n1.degerAta(5, 7);
   n1.ekranaYaz();
 
