@@ -5,18 +5,18 @@ using namespace std;
 class nokta {
 private:
   int x;
+  int y;
 
 public:
-  int y;
-  void degerAta(int, int);
+  int getX() { return x; };
+  int getY() { return y; };
+
+  void setX(int x) { this->x = x; };
+  void setY(int y) { this->y = y; };
+
   void ekranaYaz();
   bool baslangicdaMi();
 };
-
-void nokta::degerAta(int x, int y) {
-  this->x = x;
-  this->y = y;
-}
 
 void nokta::ekranaYaz() { cout << x << ", " << y << endl; }
 
