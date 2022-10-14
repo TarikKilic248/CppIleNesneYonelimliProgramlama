@@ -2,24 +2,22 @@
 
 using namespace std;
 
-namespace programci {
-int x = 15;
-void Food() {
-  int x = 5;
-  cout << x << endl;
-  ;
+class nokta {
+public:
+  int x, y;
+  void degerAta(int, int);
+  void ekranaYaz() { cout << x << ", " << y << endl; }
+};
+
+void nokta::degerAta(int x, int y) {
+  this->x = x;
+  this->y = y;
 }
-} // namespace programci
-
-int x = 3;
-
-void Boo() { cout << x << endl; }
 
 int main() {
-  cout << x<<endl;
-  int x = 10;
-  Boo();
-  cout << programci::x << endl;
-  programci::Food();
+  nokta n1;
+  n1.degerAta(5, 7);
+  n1.ekranaYaz();
+
   return 0;
 }
