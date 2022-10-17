@@ -1,26 +1,20 @@
-#ifndef _NOKTA_H_
-#define _NOKTA_H_
+#ifndef NOKTA_H
+#define NOKTA_H
 #include "Nokta.cpp"
+#include <iostream>
+
+// using namespace std;
 
 class Nokta {
 private:
   int x, y;
 
 public:
-  const int t;
-  int *z;
-  Nokta();
-  Nokta(int, int, int);
-  Nokta(const Nokta &);
-  ~Nokta();
-
+  Nokta(int x, int y);
   int getX() const;
   int getY() const;
-
-  void setX(int);
-  void setY(int);
-
-  void ekranaYaz();
-  bool baslangicdaMi();
+  void setX(int x);
+  void setY(int y);
+  friend std::ostream &operator<<(std::ostream &out, Nokta &n);
 };
 #endif
